@@ -1,38 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  margin: auto;
+  padding: 0;
+  font-size: 14pt;
+  background: url("https://i.imgur.com/dDS9OKe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Raleway", sans-serif;
+}
+
 .App {
+  cursor: url("https://i.imgur.com/ORb16SE.png?2"), auto;
+
+}
+
+p {
+  font: weight 550px;
+}
+
+nav {
+  background: #efddd6;
+  color: black;
+  align-items: baseline;
+  border-radius: 25px;
+  width: 100%;
+  align-items: center;
+}
+
+.filmsBackground {
+  background: #b9c297;
+}
+
+nav img {
+  max-height: 90px;
+  padding: 1px;
+  /* margin: 5px 20px 5px 0; */
+  display: inline-block;
+  vertical-align: middle;
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
+}
+
+nav a {
+  color: #95891d;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 1.2em;
+  text-decoration: none;
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
+  transition: 0.9s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.9s;
+}
+
+nav a:hover {
+  /* background: #F6EAE5;*/
+  border-radius: 40px;
+  transition-timing-function: ease-in-out;
+  -moz-box-shadow: 13px 13px 0 0 rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 13px 13px 0 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 0 0 #faeeaa;
+  transform: scale(0.95);
+}
+
+.official a:hover {
+  background: #efddd6;
+  border-radius: 10px;
+}
+.mainBody {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  color: white;
+}
+.HomeVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+video {
+  position: absolute;
+  border-radius: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.InputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.SearchInput {
+  border-radius: 40px;
+  padding: 0.7rem 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FilmsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.FilmCard {
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
+  border-radius: 40px;
+  width: 20rem;
+  height: 30rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.9s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.9s;
+}
+
+.FilmCard:hover {
+  transition-timing-function: ease-in-out;
+  -moz-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 10px 10px 0 0 #04668490;
+  transform: scale(1.01);
+}
+
+.FilmDetailCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 0 5rem 0;
+}
+
+.museImg {
+  width: fit-content;
+  height: 45%;
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
+}
+
+.mainCard {
+  border-radius: 40px;
+  background-color: white;
+  font-size: 15px;
+  color: black;
+  width: 15rem;
+  height: 20rem;
+  margin: 1.5rem;
+  flex-direction: column;
+  transition: 0.9s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.9s;
+}
+
+.TownInfoContainer {
+  background: #b9c29795;
+  width: 20rem;
+  height: 15rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.PeopleInfoContainer {
+  background: #b9c29795;
+  width: 15rem;
+  height: 15rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.PeopleContainer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 3rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.FilmBanner {
+  width: auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.InfoContainer div {
+  background: #b9c29795;
+  width: auto;
+}
+
+.FilmInfo {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FilmInfo p {
+  margin: 0.3rem 1rem 0.3rem 1rem;
+  font-size: 1.2rem;
+}
+
+.Synopsis {
+  width: 50vw;
+  text-align: justify;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.Synopsis:hover {
+  background: #b9c297;
+}
+
+.FilmImage {
+  max-width: 100%;
+  transition: 0.7s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.7s;
+  margin-bottom: 1.3rem;
+}
+
+.Icon {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.keyBold {
+  font-weight: bold;
 }
