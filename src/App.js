@@ -9,7 +9,6 @@ import People from "./pages/People";
 function App() {
   return (
     <div className='App'>
-      <main>
           <BrowserRouter>
             <Routes>
               <Route path="/Home" element={<Home />} />
@@ -19,7 +18,6 @@ function App() {
               <Route path="/People/" element={<People />} />
             </Routes>
           </BrowserRouter>
-        </main>
     </div>
   );
 }

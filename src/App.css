@@ -237,10 +237,13 @@ video {
 
 .Icon {
   position: absolute;
+  background-color: #E9B193;
   top: 40px;
   right: 10px;
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  cursor: url("https://i.imgur.com/OazommE.png?2"), pointer;
 }
 
 .keyBold {
