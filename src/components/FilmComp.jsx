@@ -5,21 +5,22 @@ import { Link } from "react-router-dom";
 function FilmComp() {
   const [movie, setMovie] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [displayMovie, setDisplayMovie] = useState([]);
 
   useEffect(() => {
     (async () => {
       const response = await fetch(`https://ghibliapi.herokuapp.com/films/`);
       const data = await response.json();
       setMovie(data);
-      if (searchText == "") {
-        setDisplayMovie(data)
-      } else {
-        const array = movie.filter((element) => (element.title).toLowerCase().includes(searchText.toLowerCase()))
-        setDisplayMovie(array)
-      }
     })();
-  }, [searchText]);
+  }, []);
+
+let displayMovie = [];
+  if (searchText === "") {
+    displayMovie = movie
+  } else {
+    displayMovie = movie.filter((element) => (element.title).toLowerCase().includes(searchText.toLowerCase()))
+  }
+
 
 function handleChange(event) {
   event.preventDefault();
